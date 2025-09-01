@@ -1,0 +1,6 @@
+@SSHouseOwnerService_HostAddress = http://localhost:5105
+
+GET {{SSHouseOwnerService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

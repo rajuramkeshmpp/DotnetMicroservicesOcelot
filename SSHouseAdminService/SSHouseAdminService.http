@@ -1,0 +1,6 @@
+@SSHouseAdminService_HostAddress = http://localhost:5176
+
+GET {{SSHouseAdminService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

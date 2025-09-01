@@ -1,13 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{72506CF5-C5C5-46B5-87A2-6AFA1DFEF70A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{4F3A1EBD-840C-4CF3-B8FA-E8259861A806}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{59E3F2AB-2EA0-4B7D-B21C-2379FC89F01F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "AuthService\AuthService.csproj", "{E4F9D4E5-2AA9-4545-8D48-5034A0BB405F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdminService", "HotelAdminService\HotelAdminService.csproj", "{758EB994-E5AE-4647-8315-5D7E521DD8F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCustomerService", "HotelCustomerService\HotelCustomerService.csproj", "{3873159E-2FC6-46E9-91CF-3F2E84251128}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHouseAdminService", "SSHouseAdminService\SSHouseAdminService.csproj", "{C8B3A154-8B39-41E1-B90F-AAA71C38DC0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHouseOwnerService", "SSHouseOwnerService\SSHouseOwnerService.csproj", "{66405172-CAA8-45D5-BE50-FF4EBBFB0600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +37,26 @@ Global
 		{59E3F2AB-2EA0-4B7D-B21C-2379FC89F01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59E3F2AB-2EA0-4B7D-B21C-2379FC89F01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59E3F2AB-2EA0-4B7D-B21C-2379FC89F01F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4F9D4E5-2AA9-4545-8D48-5034A0BB405F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4F9D4E5-2AA9-4545-8D48-5034A0BB405F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4F9D4E5-2AA9-4545-8D48-5034A0BB405F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4F9D4E5-2AA9-4545-8D48-5034A0BB405F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758EB994-E5AE-4647-8315-5D7E521DD8F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758EB994-E5AE-4647-8315-5D7E521DD8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758EB994-E5AE-4647-8315-5D7E521DD8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758EB994-E5AE-4647-8315-5D7E521DD8F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3873159E-2FC6-46E9-91CF-3F2E84251128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3873159E-2FC6-46E9-91CF-3F2E84251128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3873159E-2FC6-46E9-91CF-3F2E84251128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3873159E-2FC6-46E9-91CF-3F2E84251128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B3A154-8B39-41E1-B90F-AAA71C38DC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B3A154-8B39-41E1-B90F-AAA71C38DC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B3A154-8B39-41E1-B90F-AAA71C38DC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B3A154-8B39-41E1-B90F-AAA71C38DC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66405172-CAA8-45D5-BE50-FF4EBBFB0600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66405172-CAA8-45D5-BE50-FF4EBBFB0600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66405172-CAA8-45D5-BE50-FF4EBBFB0600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66405172-CAA8-45D5-BE50-FF4EBBFB0600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,30 @@
-using AuthService;
-using Microsoft.EntityFrameworkCore;
+using Amazon.DynamoDBv2.DataModel;
+using Amazon.DynamoDBv2;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Amazon;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddSingleton<IAmazonDynamoDB>(sp =>
+{
+    var awsOptions = builder.Configuration.GetSection("AWS");
+    var region = awsOptions["Region"];
+    var accessKey = awsOptions["AccessKey"];
+    var secretKey = awsOptions["SecretKey"];
+
+    return new AmazonDynamoDBClient(accessKey, secretKey, RegionEndpoint.GetBySystemName(region));
+});
+
+builder.Services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
+
 
 builder.Services.AddAuthentication("JwtBearer")
     .AddJwtBearer("JwtBearer", options =>
@@ -27,9 +40,11 @@ builder.Services.AddAuthentication("JwtBearer")
         };
     });
 
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -37,8 +52,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();

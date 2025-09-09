@@ -1,0 +1,6 @@
+@SSJobsAdminService_HostAddress = http://localhost:5082
+
+GET {{SSJobsAdminService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
